@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-content" data-aos="fade-down">
+        <div class="navbar-logo">
+          <img src="assets/logo.png" alt="Digira Logo" class="logo-img" />
+        </div>
+        <ul class="navbar-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+        <a href="#quote" class="navbar-cta">Get a Quote</a>
+        <div class="navbar-hamburger" id="navbar-hamburger" style="display: none; cursor: pointer;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="4" width="24" height="2" rx="1" fill="#FFF4B8"/>
+            <rect y="11" width="24" height="2" rx="1" fill="#FFF4B8"/>
+            <rect y="18" width="24" height="2" rx="1" fill="#FFF4B8"/>
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+      <section class="hero" id="home">
+        <div class="hero-left" data-aos="fade-right">
+          <div class="hero-tagline">
+            <h1>We Build <br /><span>Digital Experiences</span></h1>
+          </div>
+          <span id="hero-cta-line"></span>
+          <p class="hero-desc">
+            We confidently are the Only Agency which you need to fully
+            digitalize your brand.
+          </p>
+          <div class="hero-ctas">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#works" class="btn btn-outline">Our Works</a>
+          </div>
+        </div>
+        <div class="hero-right" data-aos="fade-left">
+          <img src="assets/hero.png" alt="Hero Graphic" class="hero-img" />
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-right" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Services Section -->
+    <div class="container">
+      <section class="services" id="services">
+        <h2 data-aos="fade-up">What do <span>we</span> do?</h2>
+        <p class="services-desc" data-aos="fade-up" data-aos-delay="100">
+          We provide services which takes your brand to the limits of sky
+          digitally
+        </p>
+        <div class="services-cards">
+          <!-- Example Service Card -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/branding.png" alt="Branding Icon" />
+            <h3>Branding</h3>
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <a href="#" class="btn btn-primary">Explore Now</a>
+          </div>
+          <!-- Repeat for other services -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/uiux.png" alt="UI / UX Design Icon" />
+            <h3>UI / UX Design</h3>
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <a href="#" class="btn btn-primary">Explore Now</a>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/webdev.png" alt="Web Development Icon" />
+            <h3>Web Development</h3>
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <a href="#" class="btn btn-primary">Explore Now</a>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <img
+              src="assets/digitalmarketing.png"
+              alt="Digital Marketing Icon"
+            />
+            <h3>Digital Marketing</h3>
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <a href="#" class="btn btn-primary">Explore Now</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-left" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Packages Section -->
+    <div class="container">
+      <section class="packages" id="packages">
+        <h2 data-aos="fade-up">Value <span>for</span> Money</h2>
+        <p class="packages-desc" data-aos="fade-up" data-aos-delay="100">
+          Our Packages don't only include Services, they include Value
+        </p>
+        <div class="packages-cards">
+          <!-- Left Package Card -->
+          <div class="package-card left" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/packagecenter.png" alt="Package Icon" />
+            <h3>Complete</h3>
+            <p class="package-price">$6969</p>
+            <p class="package-desc">Highest Value</p>
+            <ul>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+            </ul>
+            <a href="#" class="btn btn-package">Explore Now</a>
+          </div>
+          <!-- Left Package Card End -->
+          <!-- Center Package Card Start -->
+          <div class="package-card center" data-aos="fade-up" data-aos-delay="300">
+            <img
+              src="assets/packagecenter.png"
+              alt="Package Icon"
+              class="package-center-img"
+            />
+            <h3>Complete</h3>
+            <p class="package-price price-center">$6969</p>
+            <p class="package-desc-center" style="font-size: 20px">
+              Highest Value
+            </p>
+            <ul>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="btn btn-package-center"
+              style="margin-bottom: 40px"
+              >Explore Now</a
+            >
+          </div>
+          <!-- Center Package Card End -->
+          <!-- Right Package Card Start -->
+          <div class="package-card right" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/packagecenter.png" alt="Package Icon" />
+            <h3>Complete</h3>
+            <p class="package-price">$6969</p>
+            <p class="package-desc">Highest Value</p>
+            <ul>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+              <li>
+                <img src="assets/tick.png" />
+                Lorem Ipsum Lorem Ipsum
+              </li>
+            </ul>
+            <a href="#" class="btn btn-package">Explore Now</a>
+          </div>
+          <!-- Right Package Card End -->
+        </div>
+        <div class="single-service-cta" data-aos="fade-up" data-aos-delay="400">
+          <span>Need A Single Service?</span>
+          <a href="#quote" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-right" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Workflow Section -->
+    <div class="container">
+      <section class="workflow" id="workflow">
+        <h2 data-aos="fade-up"><span class="workflow-mobile-line1" style="color: #fff;">Our Digital </span><br class="workflow-mobile-break"><span style="color: var(--secondary);">Crafting Workflow</span></h2>
+        <p class="workflow-desc" data-aos="fade-up" data-aos-delay="100">
+          The simple process which turns your <span>requirements</span> to
+          <span>reality</span>
+        </p>
+        <div class="workflow-card" data-aos="fade-up" data-aos-delay="200">
+          <picture>
+            <source srcset="assets/workflow-mobile.png" media="(max-width: 480px)">
+            <source srcset="assets/workflow-tablet.png" media="(max-width: 1024px)">
+            <img src="assets/workflow-pc.png" alt="Workflow" />
+          </picture>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-left" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Team Section -->
+    <div class="container">
+      <section class="team" id="about">
+        <h2 data-aos="fade-up">Meet the <span>Team</span></h2>
+        <p class="team-desc" data-aos="fade-up" data-aos-delay="100">Know the guys behind <span>Digira</span></p>
+        <div class="team-cards">
+          <!-- Example Team Card -->
+          <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/divya.png" alt="Team Member" />
+            <h3>Divya D. Sharma</h3>
+            <p>UI / UX Designer</p>
+          </div>
+          <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/diwas.png" alt="Team Member" />
+            <h3>Diwas Karki</h3>
+            <p>Creative Designer</p>
+          </div>
+          <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/minhaj.png" alt="Team Member" />
+            <h3>Minhaj Sheikh</h3>
+            <p>Digital Marketer</p>
+          </div>
+          <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+            <img src="assets/alex.png" alt="Team Member" />
+            <h3>Alex J. Khatri</h3>
+            <p>Backend Developer</p>
+          </div>
+          <!-- Repeat for other team members -->
+        </div>
+        <div class="team-story-cta">
+          <a href="#" class="btn btn-primary">Our Story</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-right" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container">
+      <section class="testimonials" id="testimonials">
+        <h2 data-aos="fade-up">Here's what our <span>Clients</span> Say</h2>
+        <p class="testimonials-desc" data-aos="fade-up" data-aos-delay="100">
+          Our <span>Testimonials</span> define us the best!
+        </p>
+        <div class="testimonials-cards">
+          <!-- Testimonial Card Start-->
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/reviewer1.png" alt="Reviewer" />
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <div class="reviewer-info">
+              <span class="reviewer-name">Suresh Xettri</span>
+              <span class="reviewer-position">Founder, Cozmos & Co.</span>
+            </div>
+            <div class="reviewer-stars">★★★★★</div>
+          </div>
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/divya.png" alt="Reviewer" />
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <div class="reviewer-info">
+              <span class="reviewer-name">Suresh Xettri</span>
+              <span class="reviewer-position">Founder, Cozmos & Co.</span>
+            </div>
+            <div class="reviewer-stars">★★★★★</div>
+          </div>
+          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/reviewer1.png" alt="Reviewer" />
+            <p>
+              We offer top notch branding services which includes Logo, Social
+              Media and Marketing Posters, Business Cards, etc.
+            </p>
+            <div class="reviewer-info">
+              <span class="reviewer-name">Suresh Xettri</span>
+              <span class="reviewer-position">Founder, Cozmos & Co.</span>
+            </div>
+            <div class="reviewer-stars">★★★★★</div>
+          </div>
+          <!-- testimonial cards end -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-left" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container">
+      <section class="contact" id="contact">
+        <h2 data-aos="fade-up">Let's Get in <span>Touch</span></h2>
+        <p class="contact-desc" data-aos="fade-up" data-aos-delay="100">Please specify your <span>requirements</span> in the form below</p>
+        <div class="contact-content">
+          <form class="contact-form" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-lr-parent">
+              <div class="contact-form-left">
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="contact-form-right">
+                <input type="text" placeholder="Subject" />
+                <input type="text" placeholder="Subject" />
+              </div>
+            </div>
+            <textarea placeholder="Message"></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
+            <h3>Connect with Us</h3>
+            <ul>
+              <li>
+                <a href="" style="text-decoration: none">
+                  <img src="assets/mail.svg" alt="Email" />
+                  contact.digira@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="" style="text-decoration: none">
+                  <img src="assets/instagram.svg" alt="Instagram" />
+                  @digiragency</a
+                >
+              </li>
+              <li>
+                <a href="" style="text-decoration: none">
+                  <img src="assets/facebook.svg" alt="Facebook" />
+                  @digiragency</a
+                >
+              </li>
+              <li>
+                <a href="" style="text-decoration: none">
+                  <img src="assets/linkedin.svg" alt="LinkedIn" />
+                  @digiragency</a
+                >
+              </li>
+              <li>
+                <a href="" style="text-decoration: none">
+                  <img src="assets/youtube.svg" alt="YouTube" /> @digiragency</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-right" data-aos="fade-up">
+      <img
+        src="assets/section_divider.png"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Collaboration Section -->
+    <div class="container">
+      <section class="collaboration" data-aos="fade-up">
+        <span data-aos="fade-up" data-aos-delay="100">In Collaboration With</span>
+        <img
+          src="assets/collaboration.svg"
+          alt="Collaboration Logo"
+          class="collab-logo"
+        />
+      </section>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider-container" data-aos="fade-up">
+      <img
+        src="assets/section_divider_end.svg"
+        alt="Section Divider"
+        class="section-divider-img"
+      />
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content" data-aos="fade-up">
+          <div class="footer-left">
+            <img
+              src="assets/logo.png"
+              alt="Digira Logo"
+              class="footer-logo"
+            />
+            <p>
+              Digira is a versatile digital agency focused on building digital
+              experiences for both individuals and brands.
+            </p>
+            <div class="footer-socials">
+              <span>Our Socials:</span>
+              <div>
+              <a href="#"
+                ><img src="assets/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#"
+                ><img src="assets/linkedin.svg" alt="LinkedIn"
+              /></a>
+              <a href="#"
+                ><img src="assets/mail.svg" alt="Email"
+              /></a>
+              <a href="#"
+                ><img src="assets/instagram.svg" alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img src="assets/youtube.svg" alt="YouTube"
+              /></a>
+            </div>
+            </div>
+          </div>
+          <div class="footer-center">
+            <h4>Quick Access</h4>
+            <ul>
+              <li>Home</li>
+              <li>Services</li>
+              <li>Packages</li>
+              <li>Workflow</li>
+              <li>Works</li>
+              <li>Testimonials</li>
+              <li>Contact Us</li>
+              <li>About US</li>
+              <li>Singular Packages</li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <h4>Officials</h4>
+            <ul>
+              <li>Disclaimer</li>
+              <li>Terms of Service</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Digira | All Rights Reserved</span>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger menu toggle
+      const hamburger = document.getElementById('navbar-hamburger');
+      const navbarLinks = document.querySelector('.navbar-links');
+      const navbarCTA = document.querySelector('.navbar-cta');
+
+      function toggleNavbarMenu() {
+        navbarLinks.classList.toggle('navbar-links-active');
+        navbarCTA.classList.toggle('navbar-cta-active');
+      }
+
+      hamburger.addEventListener('click', toggleNavbarMenu);
+
+      function handleResize() {
+        if (window.innerWidth <= 768) {
+          hamburger.style.display = 'block';
+          navbarLinks.style.display = 'none';
+          navbarCTA.style.display = 'none';
+        } else {
+          hamburger.style.display = 'none';
+          navbarLinks.style.display = 'flex';
+          navbarCTA.style.display = 'inline-block';
+          navbarLinks.classList.remove('navbar-links-active');
+          navbarCTA.classList.remove('navbar-cta-active');
+        }
+      }
+
+      window.addEventListener('resize', handleResize);
+      window.addEventListener('DOMContentLoaded', handleResize);
+
+      // Show/hide menu on toggle
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          if (navbarLinks.classList.contains('navbar-links-active')) {
+            navbarLinks.style.display = 'flex';
+            navbarLinks.style.flexDirection = 'column';
+            navbarLinks.style.background = '#554D75';
+            navbarLinks.style.position = 'absolute';
+            navbarLinks.style.top = '72px';
+            navbarLinks.style.right = '0';
+            navbarLinks.style.left = '0';
+            navbarLinks.style.zIndex = '999';
+            navbarLinks.style.padding = '16px 0';
+            navbarCTA.style.display = 'block';
+            navbarCTA.style.margin = '16px auto 0 auto';
+          } else {
+            navbarLinks.style.display = 'none';
+            navbarCTA.style.display = 'none';
+          }
+        }
+      });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700, // Animation duration in milliseconds
+      });
+    </script>
+  </body>
+</html>
