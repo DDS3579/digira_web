@@ -410,11 +410,23 @@ section p {
   color: var(--secondary);
   padding: 10px 35px;
   font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-package-center:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--secondary);
 }
 .btn-package{
   background-color: var(--bg-dark);
   border: 2px solid var(--white);
   color: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn-package:hover {
+  background-color: var(--white);
+  color: var(--bg-dark);
+  border-color: var(--white);
 }
 .single-service-cta {
   display: flex;
@@ -698,6 +710,8 @@ section p {
   background: var(--footer-bg);
   color: var(--footer-text);
   padding: 48px 0 0 0;
+  position: relative;
+  z-index: 2;
 }
 .footer-content {
   display: flex;
@@ -1494,5 +1508,59 @@ body {
 @media (max-width: 480px) {
   .workflow-mobile-break {
     display: block;
+  }
+}
+
+/* Add background blob styles */
+.background-blob {
+  position: fixed;
+  z-index: 1;
+  filter: blur(100px);
+  opacity: 0.85;
+  background: radial-gradient(circle, #7D5FFF 0%, rgba(125, 95, 255, 0) 70%);
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.blob-one {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+}
+
+.blob-two {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+}
+
+.blob-three {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .background-blob {
+    opacity: 0.9; /* Increased opacity for mobile */
+  }
+
+  .blob-one {
+    width: 250px;
+    height: 250px;
+  }
+
+  .blob-two {
+    width: 350px;
+    height: 350px;
+  }
+
+  .blob-three {
+    width: 200px;
+    height: 200px;
   }
 }
