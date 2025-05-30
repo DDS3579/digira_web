@@ -783,76 +783,89 @@ section p {
     flex-direction: column;
     height: auto;
     padding: 0;
-    gap: 12px;
   }
   .navbar-content {
     flex-direction: row;
     align-items: center;
     margin-left: 8px;
     margin-right: 8px;
-  }
-  .hero {
     width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: stretch;
-    padding-left: 16px;
-    padding-right: 16px;
+    justify-content: space-between;
   }
-  .hero-right {
-    flex: 1 1 100%;
-    width: 100%;
-    min-width: 0;
-    min-height: 0;
-    text-align: center;
-    display: block !important;
+  .navbar-logo{
+    margin-left: 0;
   }
-  .hero-img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    visibility: visible !important;
-    opacity: 1 !important;
+  .navbar-hamburger{
+    margin-right: 0;
+    display: block !important; /* Ensure hamburger is visible */
   }
-  .services-cards, .packages-cards, .workflow-cards, .team-cards, .testimonials-cards, .contact-content {
+
+  /* Hide desktop links and mobile CTA by default */
+   .navbar-links, .navbar-cta-mobile {
+      display: none;
+   }
+
+   /* Hide original CTA button on mobile */
+   .navbar-cta {
+       display: none !important;
+   }
+
+  /* Style for the dropdown menu when active */
+  .navbar-links-active {
+    display: flex !important; /* Use flexbox for the active menu */
     flex-direction: column;
-    align-items: center;
     gap: 16px;
-  }
-  .service-card, .package-card, .team-card, .testimonial-card {
+    margin: 0;
+    padding: 16px;
+    background: var(--bg-dark);
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 98; /* Below the fixed navbar but above content */
     width: 100%;
-    max-width: 350px;
-    margin-bottom: 16px;
-  }
-  .single-service-cta {
-    flex-direction: column;
-    gap: 8px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
-  .contact-form, .contact-info {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+
+  /* Style for the mobile CTA button within the dropdown */
+  /* This will be a child of .navbar-links-active ul li */
+  .navbar-links-active li .navbar-cta-mobile {
+      display: block !important; /* Show the mobile CTA button when in active dropdown */
+      margin: 16px auto 0 auto !important; /* Center it below the links with space */
+      text-align: center;
+      /* Button styles - mimic .btn-primary */
+      padding: 8px 24px;
+      border-radius: var(--full-round);
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      box-shadow: 0 2px 8px 0 rgba(125,95,255,0.15);
+      transition: background 0.2s, color 0.2s;
+      font-family: var(--font-main);
   }
-  .contact-lr-parent {
-    grid-template-columns: 1fr;
-    gap: 0;
+   .navbar-links-active li .navbar-cta-mobile:hover {
+        background: var(--secondary);
+        color: var(--primary);
+   }
+
+  /* Ensure list items within the active menu are block and centered */
+  .navbar-links-active li {
+      display: block;
+      margin: 0 auto; /* Center list items */
   }
-  .footer-content {
-    gap: 16px;
-    text-align: center;
-  }
-  .footer-left, .footer-center, .footer-right {
-    flex: none;
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  .footer-socials div {
-    justify-content: center;
-  }
+
+   .navbar-links-active li a {
+       padding: 8px 0; /* Add some padding to links */
+   }
+
+   /* Ensure non-mobile-specific elements are hidden */
+    .navbar-links:not(.navbar-links-active), 
+    .navbar-cta:not(.navbar-cta-active) { /* Target original CTA here too */
+        display: none;
+    }
 }
 @media (max-width: 480px) {
   .navbar-logo{
@@ -911,11 +924,11 @@ section p {
   }
   .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack all children vertically */
+    align-items: center; /* Center items horizontally */
     gap: 24px;
     padding: 0 16px;
-    text-align: center;
+    text-align: center; /* Center all text */
   }
   .service-card {
     width: 90% !important;
@@ -1158,9 +1171,102 @@ section p {
     margin: 12px 0;
   }
   .navbar-cta {
-    margin-left: 0;
-    margin-top: 12px;
+    /* Hide the original CTA button on mobile */
+    display: none !important;
   }
+
+  /* Hide desktop links and mobile CTA by default */
+   .navbar-links, .navbar-cta-mobile {
+      display: none;
+   }
+
+  /* Show mobile-specific elements */
+  .navbar-hamburger {
+      display: block !important; /* Ensure hamburger is visible */
+  }
+
+  /* Style for the dropdown menu when active */
+  .navbar-links-active {
+    display: flex !important; /* Use flexbox for the active menu */
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 16px;
+    background: var(--bg-dark);
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 98; /* Below the fixed navbar but above content */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Style for the mobile CTA button within the dropdown */
+  .navbar-cta-mobile {
+      display: block !important; /* Show the mobile CTA button when in active dropdown */
+      margin: 16px auto 0 auto !important; /* Center it below the links with space */
+      text-align: center;
+      /* Button styles - mimic .btn-primary */
+      padding: 8px 24px;
+      border-radius: var(--full-round);
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      box-shadow: 0 2px 8px 0 rgba(125,95,255,0.15);
+      transition: background 0.2s, color 0.2s;
+      font-family: var(--font-main);
+  }
+   .navbar-cta-mobile:hover {
+        background: var(--secondary);
+        color: var(--primary);
+   }
+
+  /* Ensure list items within the active menu are block and centered */
+  .navbar-links-active li {
+      display: block;
+      margin: 0 auto; /* Center list items */
+  }
+
+   .navbar-links-active li a {
+       padding: 8px 0; /* Add some padding to links */
+   }
+
+   /* Adjust display for navbar-links when not active on mobile */
+   .navbar-links:not(.navbar-links-active) {
+       display: none;
+   }
+}
+
+/* Existing @media (max-width: 480px) - ensure no conflicting navbar styles here if possible */
+@media (max-width: 480px) {
+  /* Keep existing 480px specific styles, but rely on 768px for general mobile menu behavior */
+   .navbar-logo{
+    margin-left: 21px;
+  }
+  .navbar-hamburger{
+    margin-right: 21px;
+  }
+  /* ... other 480px styles ... */
+}
+
+/* General navbar styles outside media queries */
+.navbar-cta-mobile {
+    /* Hide mobile CTA by default on desktop */
+    display: none;
+}
+
+/* Restore desktop styles for original CTA outside mobile breakpoint */
+.navbar-cta {
+    /* Ensure original CTA is displayed on desktop */
+    display: inline-block; /* Or whatever its default display was */
+    /* Restore any desktop specific margins/padding */
+    margin-left: 24px;
+    padding: 8px 24px;
+    font-size: 17px;
 }
 
 /* Hero section improvements */

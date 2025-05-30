@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar sticky">
       <div class="navbar-content" data-aos="fade-down">
         <div class="navbar-logo">
           <img src="assets/logo.png" alt="Digira Logo" class="logo-img" />
@@ -25,6 +25,8 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#packages">Packages</a></li>
           <li><a href="#about">About Us</a></li>
+          <!-- Mobile CTA - Shown in dropdown on mobile -->
+          <li><a href="#quote" class="navbar-cta-mobile">Get a Quote</a></li>
         </ul>
         <a href="#quote" class="navbar-cta">Get a Quote</a>
         <div class="navbar-hamburger" id="navbar-hamburger" style="display: none; cursor: pointer;">
@@ -51,7 +53,7 @@
           </p>
           <div class="hero-ctas">
             <a href="#services" class="btn btn-primary">Our Services</a>
-            <a href="#works" class="btn btn-outline">Our Works</a>
+            <a href="#workflow" class="btn btn-outline">Our Workflow</a>
           </div>
         </div>
         <div class="hero-right" data-aos="fade-left">
@@ -86,7 +88,7 @@
               We offer top notch branding services which includes Logo, Social
               Media and Marketing Posters, Business Cards, etc.
             </p>
-            <a href="#" class="btn btn-primary">Explore Now</a>
+            <a href="#quote" class="btn btn-primary">Explore Now</a>
           </div>
           <!-- Repeat for other services -->
           <div class="service-card" data-aos="fade-up" data-aos-delay="300">
@@ -96,7 +98,7 @@
               We offer top notch branding services which includes Logo, Social
               Media and Marketing Posters, Business Cards, etc.
             </p>
-            <a href="#" class="btn btn-primary">Explore Now</a>
+            <a href="#quote" class="btn btn-primary">Explore Now</a>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="400">
             <img src="assets/webdev.png" alt="Web Development Icon" />
@@ -105,7 +107,7 @@
               We offer top notch branding services which includes Logo, Social
               Media and Marketing Posters, Business Cards, etc.
             </p>
-            <a href="#" class="btn btn-primary">Explore Now</a>
+            <a href="#quote" class="btn btn-primary">Explore Now</a>
           </div>
           <div class="service-card" data-aos="fade-up" data-aos-delay="500">
             <img
@@ -117,7 +119,7 @@
               We offer top notch branding services which includes Logo, Social
               Media and Marketing Posters, Business Cards, etc.
             </p>
-            <a href="#" class="btn btn-primary">Explore Now</a>
+            <a href="#quote" class="btn btn-primary">Explore Now</a>
           </div>
         </div>
       </section>
@@ -142,7 +144,7 @@
         <div class="packages-cards">
           <!-- Left Package Card -->
           <div class="package-card left" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/packagecenter.png" alt="Package Icon" />
+            <img src="assets/packagelr.svg" alt="Package Icon" />
             <h3>Complete</h3>
             <p class="package-price">$6969</p>
             <p class="package-desc">Highest Value</p>
@@ -219,7 +221,7 @@
           <!-- Center Package Card End -->
           <!-- Right Package Card Start -->
           <div class="package-card right" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/packagecenter.png" alt="Package Icon" />
+            <img src="assets/packagelr.svg" alt="Package Icon" />
             <h3>Complete</h3>
             <p class="package-price">$6969</p>
             <p class="package-desc">Highest Value</p>
@@ -275,9 +277,9 @@
         </p>
         <div class="workflow-card" data-aos="fade-up" data-aos-delay="200">
           <picture>
-            <source srcset="assets/workflow-mobile.png" media="(max-width: 480px)">
-            <source srcset="assets/workflow-tablet.png" media="(max-width: 1024px)">
-            <img src="assets/workflow-pc.png" alt="Workflow" />
+            <source srcset="assets/workflow-mobile.svg" media="(max-width: 480px)">
+            <source srcset="assets/workflow-tablet.svg" media="(max-width: 1024px)">
+            <img src="assets/workflow-pc.svg" alt="Workflow" />
           </picture>
         </div>
       </section>
@@ -355,10 +357,10 @@
               <span class="reviewer-name">Suresh Xettri</span>
               <span class="reviewer-position">Founder, Cozmos & Co.</span>
             </div>
-            <div class="reviewer-stars">★★★★★</div>
+            <div class="reviewer-stars">★★</div>
           </div>
           <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-            <img src="assets/divya.png" alt="Reviewer" />
+            <img src="assets/reviewer2.png" alt="Reviewer" />
             <p>
               We offer top notch branding services which includes Logo, Social
               Media and Marketing Posters, Business Cards, etc.
@@ -397,7 +399,7 @@
 
     <!-- Contact Section -->
     <div class="container">
-      <section class="contact" id="contact">
+      <section class="contact" id="quote">
         <h2 data-aos="fade-up">Let's Get in <span>Touch</span></h2>
         <p class="contact-desc" data-aos="fade-up" data-aos-delay="100">Please specify your <span>requirements</span> in the form below</p>
         <div class="contact-content">
